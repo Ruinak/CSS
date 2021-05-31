@@ -1,0 +1,22 @@
+/* 형식 : 선택자{ CSS 속성 } */
+body{
+    /* 폰트 글꼴 변경 */
+      font-family: cursive;
+    }
+    /* .은 클래스를 의미함! */
+    .male{
+      color: blueviolet;
+    }
+    .female{
+      color: aquamarine;
+    }
+    ul{
+      list-style: none;
+    }
+    #ceo{
+      background-color: coral;
+    }
+    h1{
+        font-size: 20px;
+        padding: 5px;
+    }

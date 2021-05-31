@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>복합 셀렉터 연습!</title>
+    <style>
+      /* 여러개 선택 : ,(콤마를 사용)*/
+      h1, h2, h3, h4, h5, h6{
+        color: darkblue;
+      }
+      /* 동시에 선택 : .를 사용*/
+      li.key{ /* li 태그이면서 클래스가 key인 것들만 적용*/ 
+        color: skyblue; 
+      }
+      /* 내부 선택 */
+      ul li{ /* 선택자가 있는데 중간에 한 칸을 띄우면 첫번째 선택자를 찾고 
+                첫번째 선택자 내부에서 두번째 선택자를 선택해서 적용*/
+        font-style: italic;
+      }
+      /* 상태별 선택 : (콜론) */
+      li:hover{ /* hover는 마우스가 위에 있을 때 선택이 됨. li태그에 마우스가 올라가면 설정대로 변함*/
+        background-color: chocolate;
+        color: white;
+      }
+      #myid{
+        color: cornflowerblue;
+      }
+      /* 선택자 우선순위는 간단하게 id > class > tag순으로 생각하면 된다. */
+      /* 우선순위가 같다면 가장 마지막에 지정된 스타일이 우선 적용 된다. */
+    </style>
+  </head>
+  <body>
+    <h1 id = myid>개발자 공부법!</h1>
+
+    <h2>개념</h2>
+    <ul>
+      <li class="key">큰 그림부터 - 목차부터, 핵심부터, 사소한건 제껴!</li>
+      <li>얕고 빠르게 - 한 번에 다 X. 뼈대부터 먼저!</li>
+      <li>점진적 확장 - 뼈대에 살을 붙이기! 어려운 건 스킵!</li>
+    </ul>
+
+    <h2>코드</h2>
+    <ul>
+      <li>따라치기 - 기초가 곧 핵심! 어려운거 NONO!</li>
+      <li class="key">바꿔보기 - 내 입맛대로 변경! 가설 -> 검증!</li>
+      <li>출제하기 - 출제자의 입장!</li>
+    </ul>
+
+    <h2>문서화!</h2>
+    <ul>
+      <li>Why - 개발은 팀 단위 협업.</li>
+      <li>How - 문학적 X. 논리적, 간결!</li>
+      <li class="key">What - 블로그, 깃허브(취업 시 유리)</li>
+    </ul>
+    <!-- https://flukeout.github.io/ 셀럭터 게임 -->
+  </body>
+</html>

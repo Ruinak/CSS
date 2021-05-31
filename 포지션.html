@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container {
+  width: 600px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  border: 2px solid gray;
+}
+.box {
+  width: 100px;
+  height: 100px;
+}
+.red {
+  background: tomato;
+}
+.green {
+  background: yellowgreen;
+}
+.blue {
+  background: skyblue;
+}
+/* 상대 좌표 : 원래 위치에서 이동. 기준이 자기자신임 */
+.relative {
+    position: relative;
+    top: 15px;
+    left: 25px;
+}
+/* 절대 좌표 : 상위 기준 태그에서 이동. 기준이 container가 됨 */
+.absolute {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.fixed {
+  background: violet;
+  position: fixed;
+  bottom : 20px;
+  right : 20px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box green absolute"></div>
+        <div class="box blue"></div>
+        <div class="box fixed"></div> <!-- 화면을 기준으로 고정되어 있음. 창을 조절해도 그자리에 딱 붙어있음.-->
+    </div>
+</body>
+</html>

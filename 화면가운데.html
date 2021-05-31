@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 화면가운데 </title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid blueviolet;
+        }
+        .center1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 화면의 가운데로 보내기 위해서 margin을 box의 절반만큼 -로 설정 */
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+        .center2{
+            position: absolute;
+            top: 50%;
+            left: 50%; 
+            
+            transform: translate(-50%, -50%); /* 화면 가운데 */
+        }
+        .flex{
+            display: flex;
+            justify-content: center; /* 가로 정렬 */
+            align-items: center; /* 세로 정렬*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box center2 flex"> 정중앙으로 </div>
+</body>
+</html>

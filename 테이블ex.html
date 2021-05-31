@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr:nth-child(even){ /* odd : 홀수, even : 짝수*/
+            background-color: #f2f2f2;
+        } /* 짝수번째 행 배경 회색깔로 설정*/
+        th {
+            background-color: skyblue;
+            color: white;
+        }
+        th, td{
+            padding: 5px;
+            text-align : left; /* 왼쪽 정렬 */
+        }
+        tr:hover{ /* 커서를 위에 올렸을 때 배경색과 글자색이 바뀜*/
+            background-color: coral;
+            color: darkblue;
+        }
+        table{
+            border-collapse: collapse; /*border line이 합쳐짐*/
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+        <tr>
+            <td>99</td>
+            <td>누가 CSS 공부한다면서요?</td>
+            <td>홍길동</td>
+            <td>2019.07.02</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>꺼진불도 다시보자.gif</td>
+            <td>김유신</td>
+            <td>2019.07.02</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>아 배고픈데...</td>
+            <td>걸신</td>
+            <td>2019.07.02</td>
+            <td>7</td>
+        </tr>
+    </table>
+</body>
+</html>

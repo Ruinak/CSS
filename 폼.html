@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * { /* 선택자 *은 모든 태그에 적용함*/
+        box-sizing: border-box; /* box-sizing이란 모든 width, heigth를 초기화한다고 생각하면 됨.*/
+        margin: 0; /* 마진은 0 */
+        padding: 0; /* 패딩도 0 */      
+      } /* 초기화 코드*/
+      body {
+        background-color: #344a72;
+        font-family: Raleway;
+        color: white;
+        line-height: 1.8; /* 줄 간격 */
+      }
+      a {
+        text-decoration: none; /* a 태그의 밑줄 삭제*/
+      }
+      #container {
+        max-width: 400px; /* 최대 가로 길이 400px */
+        margin: 30px auto;
+        padding: 20px; /* 글자와 boader와의 간격*/
+      }
+      .form-wrap { /* form-wrap은 form 태그가 담겨있는 상자*/     
+        background-color: white;
+        color: #333;
+        padding: 15px 25px;
+      }
+      .form-wrap h1, .form-wrap p { /* */
+        text-align: center; /* 제목(h1)과 글자(p)를 가운데 맞추기 글자를 가운데로*/
+      }
+      .form-wrap .form-group { /* label과 input*/
+        margin-top: 15px; /* label과 input은 묶여있는데 다른 묶음과의 사이 간격을 넓힘*/
+      }
+      .form-wrap .form-group label { 
+        display: block; /*label을 블럭태그로 바꿈. input과 다른줄로 바뀜 */
+        color: #666;
+      }
+      .form-wrap .form-group input {
+        width: 100%; /* 가로 길이 100% */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .form-wrap button {
+        display: block;  /* 버튼도 블럭으로 바꾸고 가로 100퍼*/
+        width: 100%;
+        color: white;
+        background-color: #49c1a2;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer; /* 마우스가 포인터로 변하게 됨*/
+      }
+      .form-wrap button:hover { 
+        background-color: #37a08e; /* 버튼에 마우스 올렸을 때 색깔*/
+      }
+      .form-wrap .bottom-text { 
+        font-size: 13px; /* 글자 크기 작게*/
+        margin-top: 20px;
+      }
+      footer {
+        text-align: center; /* 글자를 가운데*/
+        margin-top: 10px;
+      }
+      footer a {
+        color: #49c1a2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap"> 
+        <h1>Sign Up</h1>
+        <p>It's free and only takes a minute</p>
+        <form> <!--여기서는 form 태그에 label과 input 태그를 묶어놓음-->
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
